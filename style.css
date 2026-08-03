@@ -182,6 +182,17 @@ footer {
   font-size: 14px;
 }
 
+footer a,
+footer a:link,
+footer a:visited {
+  color: white; /* force white text */
+  text-decoration: none; /* remove underline */
+}
+
+footer a:hover {
+  color: #4da6ff; /* optional hover color */
+}
+
 /* Floating WhatsApp Button */
 .whatsapp-float {
   position: fixed;

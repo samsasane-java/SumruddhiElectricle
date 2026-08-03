@@ -15,7 +15,7 @@ function closePopup() {
 
 function sendToWhatsApp() {
   sparkleBurst();
-  const phoneNumber = "918484822660"; // Replace with your WhatsApp number
+  const phoneNumber = "918180016969"; // Replace with your WhatsApp number
   const message = encodeURIComponent(
     `Hello, I want to apply for ${selectedService}.`,
   );
