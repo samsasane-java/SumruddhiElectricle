@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Samruddhi Electrical Engineering</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="sparkles"></div>
+
+    <!-- Navigation Bar -->
+    <nav>
+      <div class="logo">⚡ Samruddhi Electrical</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger">☰</div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+      <h1>Reliable Electrical Solutions</h1>
+      <p>Govt. Approved Licensed Electrical Contractors</p>
+      <p class="founder">Founded by Mr. Tanaji Sasane</p>
+      <button onclick="showPopup('General Electrical Service Request')">
+        Request Service
+      </button>
+    </section>
+
+    <!-- Services -->
+    <main id="services" class="services">
+      <div class="card">
+        <h3>⚡ Transformer Installation</h3>
+        <button onclick="showPopup('Transformer Installation')">
+          Apply Now
+        </button>
+      </div>
+      <div class="card">
+        <h3>🔌 HT / LT Work</h3>
+        <button onclick="showPopup('HT / LT Work')">Apply Now</button>
+      </div>
+      <div class="card">
+        <h3>🏠 House Wiring</h3>
+        <button onclick="showPopup('House Wiring')">Apply Now</button>
+      </div>
+      <div class="card">
+        <h3>📟 Single/Three Phase Meter Installation</h3>
+        <button onclick="showPopup('Single/Three Phase Meter Installation')">
+          Apply Now
+        </button>
+      </div>
+      <div class="card">
+        <h3>🏭 Industrial & Apartment Maintenance</h3>
+        <button onclick="showPopup('Industrial & Apartment Maintenance')">
+          Apply Now
+        </button>
+      </div>
+    </main>
+
+    <!-- Testimonials -->
+    <section id="testimonials">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonial">
+        <p>"Reliable and professional service — highly recommended!"</p>
+        <span>- Dehugaon</span>
+      </div>
+      <div class="testimonial">
+        <p>"Quick response and excellent workmanship."</p>
+        <span>- Sudhumbare</span>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form onsubmit="sendFormToWhatsApp(event)">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="tel" id="phone" placeholder="Phone Number" required />
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <script>
+      function sendFormToWhatsApp(event) {
+        event.preventDefault(); // stop page reload
+
+        const name = document.getElementById("name").value;
+        const phone = document.getElementById("phone").value;
+        const message = document.getElementById("message").value;
+
+        // Replace with your WhatsApp number
+        const phoneNumber = "918484822660";
+
+        const text = `Hello, my name is ${name}, phone: ${phone}. Message: ${message}`;
+        const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+
+        window.open(url, "_blank"); // open WhatsApp
+      }
+    </script>
+
+    <!-- Popup -->
+    <div id="overlay"></div>
+    <div id="popup">
+      <p id="popupText"></p>
+      <button class="confirm" onclick="sendToWhatsApp()">Confirm & Send</button>
+      <button class="cancel" onclick="closePopup()">Cancel</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>📞 8180016969 / 9834414847</p>
+      <p>📧 samruddhielectrical009@gmail.com</p>
+      <p>📍 407/1, Near Yelwadi Kaman, Dehugaon-Yelwadi Road, Pune - 410501</p>
+      <p>Owner: Mr.Tanaji Sasane</p>
+      <p>© 2026 Samruddhi Electrical Engineering</p>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a
+      href="https://wa.me/91XXXXXXXXXX?text=Hello%20I%20want%20to%20know%20more%20about%20your%20services"
+      class="whatsapp-float"
+      target="_blank"
+    >
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+        alt="WhatsApp"
+      />
+    </a>
+
+    <script src="script.js"></script>
+  </body>
+</html>
