@@ -54,6 +54,16 @@
       }
     </script>
   </head>
+
+  <script>
+    function sendInquiry(serviceName) {
+      const phoneNumber = "918180016969"; // replace with your WhatsApp number
+      const text = `Hello, I am interested in your service: ${serviceName}. Please provide more details.`;
+      const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+      window.open(url, "_blank");
+    }
+  </script>
+
   <body>
     <div id="sparkles"></div>
 
@@ -71,54 +81,120 @@
 
     <!-- Hero Section -->
     <section id="hero">
-      <h1>Reliable Electrical Solutions</h1>
-      <p>Govt. Approved Licensed Electrical Contractors</p>
-      <p class="founder">Founded by Mr. Tanaji Sasane</p>
+      <p>
+        Govt. Approved Licensed Electrical Contractor – Serving Pune &
+        Surrounding Areas
+      </p>
+      <p class="founder">
+        Founded by Mr. Tanaji Sasane, delivering trusted service since inception
+      </p>
+      <p class="tagline">⚡ Reliable • 🚀 Quick • 💰 Affordable • 🛡️ Safe</p>
+
+      <ul class="commitments">
+        <li>⚡ One‑Stop Electrical Solution – From wiring to transformers</li>
+        <li>⚡ Reliable Service – Always on time</li>
+        <li>🚀 Quick Response – Fast problem solving</li>
+        <li>💰 Affordable Pricing – Value you can trust</li>
+        <li>🛡️ Safety First – Govt. approved standards</li>
+        <li>🤝 Customer Care – Friendly & supportive team</li>
+      </ul>
+
       <button onclick="showPopup('General Electrical Service Request')">
         Request Service
       </button>
     </section>
 
     <!-- Services -->
-    <main id="services" class="services">
-      <div class="card">
-        <h3>⚡ Transformer Installation</h3>
-        <button onclick="showPopup('Transformer Installation')">
-          Apply Now
-        </button>
+    <!-- Services -->
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="services">
+        <div class="card">
+          <img
+            src="assets/images/services/transformer-installation.png"
+            alt="Transformer Installation Logo"
+          />
+          <h3>Transformer Installation</h3>
+          <p>
+            Professional installation and maintenance of electrical
+            transformers.
+          </p>
+          <button onclick="sendInquiry('Transformer Installation')">
+            Inquiry
+          </button>
+        </div>
+
+        <div class="card">
+          <img
+            src="assets/images/services/HT_LT_Work.png"
+            alt="HT / LT Work Logo"
+          />
+          <h3>HT / LT Work</h3>
+          <p>
+            High-tension and low-tension electrical work with safety compliance.
+          </p>
+          <button onclick="sendInquiry('HT / LT Work')">Inquiry</button>
+        </div>
+
+        <div class="card">
+          <img
+            src="assets/images/services/House_Wiring.png"
+            alt="House Wiring Logo"
+          />
+          <h3>House Wiring</h3>
+          <p>
+            Complete residential wiring solutions with modern safety standards.
+          </p>
+          <button onclick="sendInquiry('House Wiring')">Inquiry</button>
+        </div>
+
+        <div class="card">
+          <img
+            src="assets/images/services/Meter_Installation.png"
+            alt="Meter Installation Logo"
+          />
+          <h3>Single/Three Phase Meter Installation</h3>
+          <p>
+            Accurate and efficient meter installation for homes and industries.
+          </p>
+          <button onclick="sendInquiry('Meter Installation')">Inquiry</button>
+        </div>
+
+        <div class="card">
+          <img
+            src="assets/images/services/Industrial_maintenance.png"
+            alt="Industrial Maintenance Logo"
+          />
+          <h3>Industrial & Apartment Maintenance</h3>
+          <p>
+            Comprehensive maintenance for industrial and apartment electrical
+            systems.
+          </p>
+          <button onclick="sendInquiry('Industrial & Apartment Maintenance')">
+            Inquiry
+          </button>
+        </div>
       </div>
-      <div class="card">
-        <h3>🔌 HT / LT Work</h3>
-        <button onclick="showPopup('HT / LT Work')">Apply Now</button>
-      </div>
-      <div class="card">
-        <h3>🏠 House Wiring</h3>
-        <button onclick="showPopup('House Wiring')">Apply Now</button>
-      </div>
-      <div class="card">
-        <h3>📟 Single/Three Phase Meter Installation</h3>
-        <button onclick="showPopup('Single/Three Phase Meter Installation')">
-          Apply Now
-        </button>
-      </div>
-      <div class="card">
-        <h3>🏭 Industrial & Apartment Maintenance</h3>
-        <button onclick="showPopup('Industrial & Apartment Maintenance')">
-          Apply Now
-        </button>
-      </div>
-    </main>
+    </section>
 
     <!-- Testimonials -->
     <section id="testimonials">
       <h2>What Our Clients Say</h2>
       <div class="testimonial">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
         <p>"Reliable and professional service — highly recommended!"</p>
-        <span>- Dehugaon</span>
+        <div class="user">
+          <div class="avatar">DR</div>
+          <span>Dehugaon R</span>
+        </div>
       </div>
       <div class="testimonial">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
         <p>"Quick response and excellent workmanship."</p>
-        <span>- Sudhumbare</span>
+        <div class="user">
+          <div class="avatar">SM</div>
+          <span>Sudhumbare M</span>
+        </div>
       </div>
     </section>
 
