@@ -63,6 +63,29 @@
       window.open(url, "_blank");
     }
   </script>
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+
+      // Toggle between ☰ and ✖
+      if (navLinks.classList.contains("active")) {
+        hamburger.textContent = "✖";
+      } else {
+        hamburger.textContent = "☰";
+      }
+    });
+
+    // Optional: close menu when a link is clicked
+    document.querySelectorAll(".nav-links a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        hamburger.textContent = "☰";
+      });
+    });
+  </script>
 
   <body>
     <div id="sparkles"></div>
